@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html,body{margin:0;background:#000;color:#fff;font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-feature-settings:"ss01" on;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#ffb829;text-decoration:none}
+a:hover{color:#fff}
+</style>
+</helmet>
+
+<div style="background:#000;min-height:100vh;overflow-x:hidden">
+
+<nav style="position:sticky;top:0;z-index:20;background:rgba(0,0,0,0.82);backdrop-filter:blur(10px)">
+  <div style="max-width:1280px;margin:0 auto;padding:18px 30px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+    <a href="#inicio" style="display:flex;align-items:center;gap:12px;color:#fff">
+      <span style="width:0;height:0;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:15px solid #8052ff"></span>
+      <span style="font-size:14px;font-weight:600;letter-spacing:0.035em;text-transform:uppercase">El Olimpo <span style="color:#9a9a9a;font-weight:400">Dreamworks</span></span>
+    </a>
+    <div style="display:flex;align-items:center;gap:30px;flex-wrap:wrap">
+      <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:13px;font-weight:600;letter-spacing:0.035em;text-transform:uppercase">
+        <a href="#servicios" style="color:#9a9a9a" style-hover="color:#fff">Servicios</a>
+        <a href="#planes" style="color:#9a9a9a" style-hover="color:#fff">Planes</a>
+        <a href="#contenido" style="color:#9a9a9a" style-hover="color:#fff">Contenido</a>
+        <a href="#portafolio" style="color:#9a9a9a" style-hover="color:#fff">Portafolio</a>
+      </div>
+      <a href="#contacto" style="background:#8052ff;color:#fff;border-radius:24px;padding:13px 18px;font-size:13px;font-weight:600;letter-spacing:0.035em;text-transform:uppercase" style-hover="background:#9370ff;color:#fff">Quiero destacar</a>
+    </div>
+  </div>
+</nav>
+
+<section id="inicio" data-screen-label="Hero" style="max-width:1280px;margin:0 auto;padding:72px 30px 96px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:36px;align-items:center">
+  <div style="display:flex;flex-direction:column;gap:30px">
+    <div style="font-size:13px;font-weight:600;letter-spacing:0.035em;text-transform:uppercase;color:#ffb829">Empresa de comunicación y publicidad</div>
+    <h1 style="margin:0;font-weight:400;font-size:clamp(52px,8.4vw,113px);line-height:0.95;letter-spacing:-0.04em">El Olimpo<br><span style="color:#9a9a9a">Dreamworks</span></h1>
+    <p style="margin:0;font-weight:200;font-size:clamp(20px,2.2vw,27px);line-height:1.3;max-width:520px;text-wrap:pretty">En un mundo donde todos publican, pocas marcas logran destacar.</p>
+    <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+      <a href="#planes" style="background:#8052ff;color:#fff;border-radius:24px;padding:15px 20px;font-size:14px;font-weight:600;letter-spacing:0.035em;text-transform:uppercase" style-hover="background:#9370ff;color:#fff">Ver planes</a>
+      <a href="#servicios" style="color:#fff;font-size:14px;letter-spacing:0.035em;text-transform:uppercase;border-bottom:1px solid #9a9a9a;padding-bottom:4px" style-hover="color:#ffb829">Nuestros servicios</a>
+    </div>
+  </div>
+  <div style="position:relative;height:clamp(360px,48vw,600px)">
+    <canvas ref="{{ canvasRef }}" style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
+  </div>
+</section>
+
+<section data-screen-label="Quiénes somos" style="max-width:1280px;margin:0 auto;padding:60px 30px 120px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:36px">
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="height:380px"><image-slot id="about-1" shape="rounded" radius="24" placeholder="Foto: cliente heladería"></image-slot></div>
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#8052ff">01</div>
+      <h3 style="margin:0;font-weight:400;font-size:36px;letter-spacing:-0.03em;line-height:1.1">¿Quiénes somos?</h3>
+      <p style="margin:0;font-weight:200;font-size:18px;line-height:1.5;color:#bdbdbd;text-wrap:pretty">Olimpo Dreamworks nace para ayudar a empresas, emprendedores, profesionales y figuras públicas a construir una presencia digital estratégica, diferenciada y orientada a resultados.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="height:380px"><image-slot id="about-2" shape="rounded" radius="24" placeholder="Foto: producto juguetería"></image-slot></div>
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#8052ff">02</div>
+      <h3 style="margin:0;font-weight:400;font-size:36px;letter-spacing:-0.03em;line-height:1.1">Lo que creemos</h3>
+      <p style="margin:0;font-weight:200;font-size:18px;line-height:1.5;color:#bdbdbd;text-wrap:pretty">No creemos en publicar por publicar. Creemos en crear contenido que genere <span style="color:#ffb829;font-weight:400">posicionamiento, confianza, comunidad y ventas.</span></p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="height:380px"><image-slot id="about-3" shape="rounded" radius="24" placeholder="Foto: joyería"></image-slot></div>
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#8052ff">03</div>
+      <h3 style="margin:0;font-weight:400;font-size:36px;letter-spacing:-0.03em;line-height:1.1">Nuestra visión</h3>
+      <p style="margin:0;font-weight:200;font-size:18px;line-height:1.5;color:#bdbdbd;text-wrap:pretty">Transformar ideas, negocios y marcas personales en referentes dentro de sus industrias mediante estrategias de comunicación, marketing y contenido de alto impacto.</p>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" data-screen-label="Servicios" style="max-width:1280px;margin:0 auto;padding:60px 30px 120px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:60px">
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <div style="font-size:13px;font-weight:600;letter-spacing:0.035em;text-transform:uppercase;color:#ffb829">Lo que hacemos</div>
+    <h2 style="margin:0;font-weight:400;font-size:clamp(48px,6.4vw,78px);line-height:1;letter-spacing:-0.04em">Servicios</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px">
+      <div style="aspect-ratio:3/4"><image-slot id="srv-1" shape="rounded" radius="18" placeholder="Evento"></image-slot></div>
+      <div style="aspect-ratio:3/4"><image-slot id="srv-2" shape="rounded" radius="18" placeholder="Campaña política"></image-slot></div>
+      <div style="aspect-ratio:3/4"><image-slot id="srv-3" shape="rounded" radius="18" placeholder="Retrato"></image-slot></div>
+      <div style="aspect-ratio:3/4"><image-slot id="srv-4" shape="rounded" radius="18" placeholder="Clientes"></image-slot></div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));column-gap:36px;align-content:end">
+    <sc-for list="{{ services }}" as="s" hint-placeholder-count="10">
+      <div style="display:flex;gap:18px;align-items:baseline;padding:16px 0;border-bottom:1px solid #1c1c1c">
+        <span style="font-size:12px;color:#8052ff;font-weight:600;min-width:20px">{{ s.n }}</span>
+        <span style="font-size:20px;font-weight:200;line-height:1.3">{{ s.name }}</span>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="planes" data-screen-label="Planes de manejo de redes" style="max-width:1280px;margin:0 auto;padding:60px 30px 120px;display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:18px">
+    <div style="font-size:13px;font-weight:600;letter-spacing:0.035em;text-transform:uppercase;color:#ffb829">Planes de manejo</div>
+    <h2 style="margin:0;font-weight:400;font-size:clamp(48px,6.4vw,78px);line-height:1;letter-spacing:-0.04em">De redes sociales</h2>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap">
+    <sc-for list="{{ planTabs }}" as="t" hint-placeholder-count="4">
+      <button onClick="{{ t.select }}" style="{{ t.style }}">{{ t.label }}</button>
+    </sc-for>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:60px;padding-top:12px">
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="display:flex;align-items:flex-end;gap:24px">
+        <span style="font-size:clamp(78px,9vw,113px);line-height:0.85;font-weight:400;letter-spacing:-0.05em;color:#8052ff">{{ plan.num }}</span>
+        <div style="display:flex;flex-direction:column;gap:8px;padding-bottom:6px">
+          <span style="font-size:clamp(28px,3vw,42px);font-weight:400;letter-spacing:-0.03em;line-height:1">{{ plan.name }}</span>
+          <span style="font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#ffb829">{{ plan.tag }}</span>
+        </div>
+      </div>
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#9a9a9a;margin-top:12px">Incluye</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));column-gap:30px;row-gap:10px">
+        <sc-for list="{{ plan.base }}" as="f" hint-placeholder-count="13">
+          <div style="font-size:16px;font-weight:200;line-height:1.4;color:#bdbdbd;display:flex;gap:10px"><span style="color:#8052ff">·</span><span>{{ f }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#9a9a9a">Volumen de contenido</div>
+      <sc-for list="{{ plan.volume }}" as="v" hint-placeholder-count="6">
+        <div style="font-size:clamp(22px,2.3vw,30px);font-weight:200;letter-spacing:-0.02em;line-height:1.2;padding-bottom:14px;border-bottom:1px solid #1c1c1c">{{ v }}</div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="contenido" data-screen-label="Creación de contenido" style="max-width:1280px;margin:0 auto;padding:60px 30px 120px;display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:18px">
+    <div style="font-size:13px;font-weight:600;letter-spacing:0.035em;text-transform:uppercase;color:#ffb829">De contenido</div>
+    <h2 style="margin:0;font-weight:400;font-size:clamp(48px,6.4vw,78px);line-height:1;letter-spacing:-0.04em">Creación</h2>
+  </div>
+  <div style="display:flex;flex-direction:column">
+    <sc-for list="{{ contentPlans }}" as="c" hint-placeholder-count="4">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:24px;align-items:center;padding:30px 0;border-top:1px solid #1c1c1c">
+        <div style="font-size:clamp(28px,3vw,42px);font-weight:400;letter-spacing:-0.03em;line-height:1">{{ c.name }}</div>
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:42px;letter-spacing:-0.04em;line-height:1">{{ c.valor }}</span><span style="font-size:14px;font-weight:200;color:#9a9a9a">videos de valor</span></div>
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:42px;letter-spacing:-0.04em;line-height:1">{{ c.pub }}</span><span style="font-size:14px;font-weight:200;color:#9a9a9a">{{ c.pubLabel }}</span></div>
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:42px;letter-spacing:-0.04em;line-height:1">{{ c.marca }}</span><span style="font-size:14px;font-weight:200;color:#9a9a9a">videos de marca</span></div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="Expertos en comunicación" style="max-width:1280px;margin:0 auto;padding:60px 30px 120px;display:flex;flex-direction:column;gap:60px">
+  <div style="display:flex;flex-direction:column;gap:18px">
+    <div style="font-size:13px;font-weight:600;letter-spacing:0.035em;text-transform:uppercase;color:#ffb829">En comunicación</div>
+    <h2 style="margin:0;font-weight:400;font-size:clamp(48px,6.4vw,78px);line-height:1;letter-spacing:-0.04em">Expertos</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:60px;align-items:center">
+    <div style="height:440px"><image-slot id="exp-politico" shape="rounded" radius="24" placeholder="Foto: Dr. David Álvarez"></image-slot></div>
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <h3 style="margin:0;font-weight:400;font-size:clamp(36px,4vw,48px);letter-spacing:-0.035em;line-height:1.05">Plan político</h3>
+      <p style="margin:0;font-weight:200;font-size:20px;line-height:1.45;color:#fff;max-width:480px">La política moderna exige estrategia, narrativa y posicionamiento.</p>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <sc-for list="{{ politico }}" as="p" hint-placeholder-count="7">
+          <div style="font-size:16px;font-weight:200;color:#bdbdbd;display:flex;gap:10px"><span style="color:#8052ff">·</span><span>{{ p }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:60px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <h3 style="margin:0;font-weight:400;font-size:clamp(36px,4vw,48px);letter-spacing:-0.035em;line-height:1.05">Asesoría y capacitaciones</h3>
+      <p style="margin:0;font-weight:200;font-size:20px;line-height:1.45;color:#fff;max-width:480px">Ideal para emprendedores y empresas que desean mejorar sus resultados digitales.</p>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <sc-for list="{{ asesoria }}" as="p" hint-placeholder-count="6">
+          <div style="font-size:16px;font-weight:200;color:#bdbdbd;display:flex;gap:10px"><span style="color:#8052ff">·</span><span>{{ p }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="height:440px"><image-slot id="exp-asesoria" shape="rounded" radius="24" placeholder="Foto: capacitación"></image-slot></div>
+  </div>
+</section>
+
+<section data-screen-label="Servicios especializados" style="max-width:1280px;margin:0 auto;padding:60px 30px 120px;display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:18px">
+    <div style="font-size:13px;font-weight:600;letter-spacing:0.035em;text-transform:uppercase;color:#ffb829">UGC creator</div>
+    <h2 style="margin:0;font-weight:400;font-size:clamp(48px,6.4vw,78px);line-height:1;letter-spacing:-0.04em">Servicios especializados</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px">
+    <div style="display:flex;flex-direction:column;gap:18px"><div style="aspect-ratio:4/5"><image-slot id="esp-1" shape="rounded" radius="24" placeholder="Diseño gráfico"></image-slot></div><span style="font-size:24px;letter-spacing:-0.02em">Diseño gráfico</span></div>
+    <div style="display:flex;flex-direction:column;gap:18px"><div style="aspect-ratio:4/5"><image-slot id="esp-2" shape="rounded" radius="24" placeholder="Producción audiovisual"></image-slot></div><span style="font-size:24px;letter-spacing:-0.02em">Producción audiovisual</span></div>
+    <div style="display:flex;flex-direction:column;gap:18px"><div style="aspect-ratio:4/5"><image-slot id="esp-3" shape="rounded" radius="24" placeholder="Meta Ads"></image-slot></div><span style="font-size:24px;letter-spacing:-0.02em">Meta Ads y publicidad digital</span></div>
+    <div style="display:flex;flex-direction:column;gap:18px"><div style="aspect-ratio:4/5"><image-slot id="esp-4" shape="rounded" radius="24" placeholder="Comunicación política"></image-slot></div><span style="font-size:24px;letter-spacing:-0.02em">Comunicación política</span></div>
+  </div>
+</section>
+
+<section data-screen-label="Servicios +" style="max-width:1280px;margin:0 auto;padding:60px 30px 120px;display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:18px">
+    <div style="font-size:13px;font-weight:600;letter-spacing:0.035em;text-transform:uppercase;color:#ffb829">Experiencia y profesionalismo</div>
+    <h2 style="margin:0;font-weight:400;font-size:clamp(48px,6.4vw,78px);line-height:1;letter-spacing:-0.04em">Servicios <span style="color:#8052ff">+</span></h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:48px">
+    <sc-for list="{{ extras }}" as="e" hint-placeholder-count="3">
+      <div style="display:flex;flex-direction:column;gap:18px;border-top:1px solid #8052ff;padding-top:24px">
+        <h3 style="margin:0;font-weight:400;font-size:27px;letter-spacing:-0.02em;line-height:1.1">{{ e.title }}</h3>
+        <sc-for list="{{ e.items }}" as="i" hint-placeholder-count="5">
+          <div style="font-size:16px;font-weight:200;color:#bdbdbd">{{ i }}</div>
+        </sc-for>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="portafolio" data-screen-label="Portafolio" style="max-width:1280px;margin:0 auto;padding:60px 30px 120px;display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:18px">
+    <div style="font-size:13px;font-weight:600;letter-spacing:0.035em;text-transform:uppercase;color:#ffb829">Portafolio de contenido</div>
+    <h2 style="margin:0;font-weight:400;font-size:clamp(48px,6.4vw,78px);line-height:1;letter-spacing:-0.04em">Estadísticas</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:30px">
+    <sc-for list="{{ videos }}" as="v" hint-placeholder-count="3">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="aspect-ratio:9/16"><image-slot id="{{ v.id }}" shape="rounded" radius="24" placeholder="{{ v.ph }}"></image-slot></div>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
+          <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:27px;letter-spacing:-0.03em">{{ v.views }}</span><span style="font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#9a9a9a">Vistas</span></div>
+          <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:27px;letter-spacing:-0.03em">{{ v.likes }}</span><span style="font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#9a9a9a">Me gusta</span></div>
+          <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:27px;letter-spacing:-0.03em">{{ v.comments }}</span><span style="font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#9a9a9a">Comentarios</span></div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="Clientes" style="max-width:1280px;margin:0 auto;padding:60px 30px 120px;display:flex;flex-direction:column;gap:60px">
+  <div style="display:flex;flex-direction:column;gap:18px">
+    <div style="font-size:13px;font-weight:600;letter-spacing:0.035em;text-transform:uppercase;color:#ffb829">Gracias por confiar</div>
+    <h2 style="margin:0;font-weight:400;font-size:clamp(48px,6.4vw,78px);line-height:1;letter-spacing:-0.04em">Confían en nosotros</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:36px">
+    <sc-for list="{{ clients }}" as="c" hint-placeholder-count="4">
+      <a href="{{ c.url }}" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:18px;color:#fff" style-hover="color:#ffb829">
+        <div style="width:150px;height:150px"><image-slot id="{{ c.id }}" shape="circle" placeholder="Logo"></image-slot></div>
+        <span style="font-size:14px;font-weight:600;letter-spacing:0.035em">{{ c.handle }}</span>
+      </a>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="Filosofía" style="max-width:1280px;margin:0 auto;padding:96px 30px 120px;display:flex;flex-direction:column;gap:36px">
+  <div style="font-size:13px;font-weight:600;letter-spacing:0.035em;text-transform:uppercase;color:#ffb829">Filosofía</div>
+  <p style="margin:0;font-weight:400;font-size:clamp(32px,4.6vw,60px);line-height:1.1;letter-spacing:-0.035em;max-width:1100px;text-wrap:pretty"><span style="color:#9a9a9a">Las redes sociales no son un álbum de fotos.</span> Son una herramienta para construir autoridad, generar confianza y aumentar ventas.</p>
+  <p style="margin:0;font-weight:200;font-size:clamp(22px,2.4vw,30px);line-height:1.35;max-width:820px;color:#bdbdbd">En Olimpo Dreamworks no creamos publicaciones. Creamos marcas que <span style="color:#ffb829;font-weight:400">la gente recuerda.</span></p>
+</section>
+
+<section id="contacto" data-screen-label="CTA" style="max-width:1280px;margin:0 auto;padding:96px 30px 120px;display:flex;flex-direction:column;align-items:flex-start;gap:36px;border-top:1px solid #1c1c1c">
+  <h2 style="margin:0;font-weight:400;font-size:clamp(48px,7vw,96px);line-height:1;letter-spacing:-0.045em;max-width:1000px">Tú puedes unirte a nuestro selecto grupo.</h2>
+  <a href="#planes" style="background:#8052ff;color:#fff;border-radius:24px;padding:15px 22px;font-size:14px;font-weight:600;letter-spacing:0.035em;text-transform:uppercase" style-hover="background:#9370ff;color:#fff">Elige tu plan</a>
+</section>
+
+<footer style="max-width:1280px;margin:0 auto;padding:30px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12px;color:#9a9a9a;letter-spacing:0.035em;text-transform:uppercase">
+  <span>El Olimpo Dreamworks</span>
+  <span>Empresa de comunicación y publicidad</span>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showParticles&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;defaultPlan&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[0,1,2,3],&quot;default&quot;:0,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  state = { plan: this.props.defaultPlan ?? 0 };
+  canvasRef = React.createRef();
+
+  componentDidMount() { this.startParticles(); }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); window.removeEventListener('resize', this.onResize); }
+  componentDidUpdate(prev) { if (prev.showParticles !== this.props.showParticles) { cancelAnimationFrame(this.raf); this.startParticles(); } }
+
+  startParticles() {
+    const c = this.canvasRef.current; if (!c) return;
+    const ctx = c.getContext('2d');
+    const on = this.props.showParticles ?? true;
+    const pal = ['#8052ff', '#a68bff', '#ffb829', '#15846e', '#c04cff', '#5a7bff', '#ffffff'];
+    const rnd = (a, b) => a + Math.random() * (b - a);
+    const g = () => (Math.random() + Math.random() + Math.random() - 1.5) / 1.5;
+    const el = (x, y, cx, cy, rx, ry) => ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2;
+    const inBrain = (x, y) => {
+      const cere = el(x, y, 0, -0.06, 0.42, 0.28) < 1 && !(y > 0.08 && x > 0.06);
+      const temp = el(x, y, -0.06, 0.08, 0.3, 0.13) < 1;
+      const cbl = el(x, y, 0.25, 0.14, 0.15, 0.085) < 1;
+      const stem = x > 0.07 - (y - 0.15) * 0.15 && x < 0.15 - (y - 0.15) * 0.15 && y > 0.1 && y < 0.36;
+      if (!(cere || temp || cbl || stem)) return 0;
+      const fiss = Math.abs((y - 0.07) + (x + 0.15) * 0.22) < 0.014 && x > -0.2 && x < 0.18;
+      if (fiss) return 0;
+      if (cbl && !cere) return Math.abs(Math.sin(y * 120 + x * 10)) < 0.55 ? 1 : 0.15;
+      if (stem && !cere && !temp) return 0.8;
+      const f = Math.sin(x * 34 + Math.sin(y * 21) * 2.4) * Math.sin(y * 30 + Math.sin(x * 17) * 2.1);
+      return Math.abs(f) < 0.32 ? 1 : 0.12;
+    };
+    const pts = [];
+    let tries = 0;
+    while (pts.length < 1700 && tries < 60000) {
+      tries++;
+      const x = rnd(-0.45, 0.45), y = rnd(-0.38, 0.4);
+      const p = inBrain(x, y);
+      if (Math.random() > p) continue;
+      pts.push({ x, y, s: rnd(1.6, 3.6), r: rnd(0, 6.28), vr: rnd(-0.01, 0.01), ph: rnd(0, 6.28),
+        col: pal[Math.floor(Math.random() * pal.length)], a: rnd(0.55, 1) });
+    }
+    for (let i = 0; i < 160; i++) pts.push({ x: rnd(-0.6, 0.6), y: rnd(-0.5, 0.5), s: rnd(1.2, 2.6), r: rnd(0, 6.28), vr: rnd(-0.01, 0.01), ph: rnd(0, 6.28), col: pal[Math.floor(Math.random() * pal.length)], a: rnd(0.12, 0.35) });
+    let W = 0, H = 0;
+    const size = () => { const dpr = window.devicePixelRatio || 1; W = c.clientWidth; H = c.clientHeight; c.width = W * dpr; c.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); };
+    this.onResize = size; window.addEventListener('resize', size); size();
+    for (const p of pts) { p.z = rnd(-0.12, 0.12); p.cx = rnd(-1.2, 1.2); p.cy = rnd(-1, 1); p.ox = 0; p.oy = 0; }
+    const mouse = { x: -9999, y: -9999 };
+    c.addEventListener('pointermove', (e) => { const b = c.getBoundingClientRect(); mouse.x = e.clientX - b.left; mouse.y = e.clientY - b.top; });
+    c.addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999; });
+    const t0 = performance.now();
+    const draw = (t) => {
+      ctx.clearRect(0, 0, W, H);
+      if (!on) return;
+      const sc = Math.min(W * 1.1, H * 1.25), cx = W / 2, cy = H / 2, k = t * 0.0006;
+      const intro = Math.min(1, (t - t0) / 2200), ease = 1 - Math.pow(1 - intro, 3);
+      const yaw = Math.sin(k * 0.7) * 0.35, cyw = Math.cos(yaw), syw = Math.sin(yaw);
+      const wave = ((k * 0.9) % 2.2) - 0.6;
+      ctx.lineWidth = 1;
+      for (const p of pts) {
+        p.r += p.vr;
+        const hx = p.x * cyw + p.z * syw, hz = -p.x * syw + p.z * cyw, persp = 1 + hz * 0.9;
+        let bx = (p.cx + (hx - p.cx) * ease) * persp + Math.sin(k * 1.6 + p.ph) * 0.006;
+        let by = (p.cy + (p.y - p.cy) * ease) * persp + Math.cos(k * 1.3 + p.ph) * 0.006 + Math.sin(k * 1.2) * 0.012;
+        let x = cx + bx * sc, y = cy + by * sc;
+        const dx = x - mouse.x, dy = y - mouse.y, d2 = dx * dx + dy * dy;
+        if (d2 < 9000) { const f = (1 - d2 / 9000) * 22; p.ox += (dx / Math.sqrt(d2 + 1)) * f * 0.12; p.oy += (dy / Math.sqrt(d2 + 1)) * f * 0.12; }
+        p.ox *= 0.92; p.oy *= 0.92; x += p.ox; y += p.oy;
+        const glow = Math.max(0, 1 - Math.abs(p.x - wave) * 9);
+        ctx.globalAlpha = Math.min(1, p.a * (0.55 + 0.25 * Math.sin(k * 3 + p.ph)) * persp + glow * 0.6);
+        ctx.strokeStyle = p.col;
+        ctx.beginPath();
+        for (let j = 0; j < 3; j++) { const an = p.r + j * 2.094; const px = x + Math.cos(an) * p.s, py = y + Math.sin(an) * p.s; j ? ctx.lineTo(px, py) : ctx.moveTo(px, py); }
+        ctx.closePath(); ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+      this.raf = requestAnimationFrame(draw);
+    };
+    this.raf = requestAnimationFrame(draw);
+  }
+
+  renderVals() {
+    const base = ['Administración de Facebook, Instagram y TikTok', 'Configuración de perfiles', 'Planificación mensual', 'Temario estratégico', 'Calendario de contenidos', 'Leads y copys personalizados', '3 reuniones mensuales', 'Producción audiovisual', 'Edición profesional', 'Hasta 3 cambios por pieza', 'Automatización de chat (opcional)', 'Estrategia básica Meta Ads'];
+    const plans = [
+      { num: '01', name: 'Plan Standard', tag: 'Ideal para empresas que buscan presencia digital constante', base: [...base, 'Informe mensual'], volume: ['3 posteos', '4 reels', '4 historias', '1 carrusel'] },
+      { num: '02', name: 'Plan Básico', tag: 'Todo lo incluido en el Plan Standard más:', base: [...base, 'Informe mensual'], volume: ['5 posteos', '5 reels', '6 historias', '2 carruseles', 'Pack de fotografía', 'Mayor seguimiento', 'Informe ampliado'] },
+      { num: '03', name: 'Plan Medium', tag: 'Todo lo incluido en el Plan Básico más:', base: [...base, 'Informe mensual ampliado'], volume: ['Seguimiento diario', '6 posteos', '7 reels', '7 historias', '2 carruseles', 'Pack de fotografía', 'Plan de posicionamiento', 'Asesoría técnica personalizada'] },
+      { num: '04', name: 'Plan El Olimpo', tag: 'Nuestro servicio más completo', base: [...base, 'Informe mensual ampliado'], volume: ['Equipo de marketing a disposición', 'Dirección estratégica integral', '6 posteos', '7 reels', '7 historias', '2 carruseles', 'Pack de fotografía', 'Plan de posicionamiento', 'Asesoría en comunicación', 'Optimización constante'] }
+    ];
+    const cur = this.state.plan;
+    const tabStyle = (on) => ({ cursor: 'pointer', fontFamily: 'inherit', borderRadius: 24, padding: '13px 20px', fontSize: 14, fontWeight: 600, letterSpacing: '0.035em', textTransform: 'uppercase', border: on ? '1px solid #8052ff' : '1px solid #2a2a2a', background: on ? '#8052ff' : 'transparent', color: on ? '#fff' : '#9a9a9a' });
+    const services = ['Marketing Digital', 'Manejo de Redes Sociales', 'Creación de Contenido', 'Branding e Identidad de Marca', 'Producción Audiovisual', 'Estrategias de Ventas', 'Meta Ads', 'Comunicación Política', 'Asesoría Estratégica', 'Automatización Digital'].map((name, i) => ({ name, n: String(i + 1).padStart(2, '0') }));
+    return {
+      canvasRef: this.canvasRef,
+      services,
+      plan: plans[cur],
+      planTabs: plans.map((p, i) => ({ label: `${p.num} · ${p.name.replace('Plan ', '')}`, style: tabStyle(i === cur), select: () => this.setState({ plan: i }) })),
+      contentPlans: [
+        { name: 'Plan Standard', valor: 8, pub: 3, pubLabel: 'videos para publicidad', marca: 2 },
+        { name: 'Plan Medium', valor: 10, pub: 4, pubLabel: 'videos publicitarios', marca: 4 },
+        { name: 'Plan Premium', valor: 15, pub: 6, pubLabel: 'videos publicitarios', marca: 5 },
+        { name: 'Plan El Olimpo', valor: 20, pub: 9, pubLabel: 'videos publicitarios', marca: 6 }
+      ],
+      politico: ['Seguimiento mensual', 'Construcción y análisis de discurso', 'Asesoría de imagen', 'Puesta en escena', 'Estrategia de desarrollo político', 'Contexto y coyuntura política', 'Comunicación estratégica'],
+      asesoria: ['Manejo de redes sociales', 'Herramientas digitales', 'Aplicaciones de trabajo', 'Marketing digital', 'Estrategia de ventas', 'Identidad de marca'],
+      extras: [
+        { title: 'Cobertura de Eventos', items: ['Fotografía profesional', 'Video resumen', 'Reels para redes sociales', 'Cobertura en tiempo real', 'Producción de contenido postevento'] },
+        { title: 'Capacitaciones y Talleres', items: ['Redes sociales para empresas', 'Marca personal', 'Marketing digital', 'Comunicación estratégica', 'Ventas en redes sociales', 'Inteligencia artificial aplicada a negocios'] },
+        { title: 'Producción Audiovisual', items: ['Producción de comerciales', 'Videos corporativos', 'Cobertura de eventos', 'Fotografía profesional', 'Producción de podcasts', 'Producción aérea con dron'] }
+      ],
+      videos: [
+        { id: 'vid-1', ph: 'Video: El After', views: '1.4M', likes: '48.4K', comments: '1985' },
+        { id: 'vid-2', ph: 'Video: Etelvina Caicedo', views: '22.9K', likes: '881', comments: '70' },
+        { id: 'vid-3', ph: 'Video: Goku', views: '124.2K', likes: '4.1K', comments: '98' }
+      ],
+      clients: [
+        { id: 'cl-1', handle: '@valeskapark', url: 'https://instagram.com/valeskapark' },
+        { id: 'cl-2', handle: '@iustisent.s.legales', url: 'https://instagram.com/iustisent.s.legales' },
+        { id: 'cl-3', handle: '@heladeriaoasis.ec', url: 'https://instagram.com/heladeriaoasis.ec' },
+        { id: 'cl-4', handle: '@merizaldelegal', url: 'https://instagram.com/merizaldelegal' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
